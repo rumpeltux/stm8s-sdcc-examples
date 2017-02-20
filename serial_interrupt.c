@@ -52,7 +52,7 @@ void uart1_isr(void) __interrupt(UART1_T_TXE_vector) {
     else {
       // Transfer complete. Disable interrupts.
       // The main loop detects this condition.
-      CLRBIT(UART1_CR2, UART_CR2_TIEN)
+      CLRBIT(UART1_CR2, UART_CR2_TIEN);
     }
   }
 }
