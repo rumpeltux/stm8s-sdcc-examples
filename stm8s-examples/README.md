@@ -21,3 +21,15 @@ online for <1$.
 $ make
 $ stm8flash -c stlinkv2 -p stm8s103f3 -w led.ihx
 ```
+
+# Examples
+
+## LED & Timer
+`led.c` sets up a timer and uses the onboard LED to blink in defined intervals.
+
+## Serial
+`serial.c` demos using the UART to transmit serial data.
+
+## Interrupts
+`serial_interrupt.c` sets up an interrupt handler to perform serial transmission
+without busy wait.
