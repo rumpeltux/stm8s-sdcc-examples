@@ -1,7 +1,7 @@
 CC := sdcc
 CFLAGS := -mstm8 --std-c99
 
-all: led.ihx
+all: led.ihx serial.ihx
 
 %.ihx: %.c
 	$(CC) $(CFLAGS) $<

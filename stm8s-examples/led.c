@@ -1,3 +1,4 @@
+// Source code under CC0 1.0
 #include <stdint.h>
 
 #define CLK_DIVR	(*(volatile uint8_t *)0x50c6)
