@@ -14,8 +14,8 @@ online for <1$.
 
 # Run
 
-0. You’ll need a programmer, e.g. stlink-v2.
-0. Get [stm8flash](https://github.com/vdudouyt/stm8flash).
+0. You’ll need a programmer, e.g. stlink-v2 or the esp8266-based [esp-stlink](https://github.com/rumpeltux/esp-stlink)
+0. Get [stm8flash](https://github.com/rumpeltux/stm8flash).
 
 ```shell
 $ make
