@@ -30,7 +30,7 @@
 
 #define wfi()                                                                  \
   { __asm__("wfi\n"); } /* Wait For Interrupt */
-#define rmi()                                                                  \
+#define rim()                                                                  \
   { __asm__("rim"); } /* Enable interrupts */
 
 // These are optimized by sdcc to use the bset/bres assembly instructions.
@@ -76,7 +76,7 @@ void main(void) {
   UART1_BRR2 = 0x03;
   UART1_BRR1 = 0x68; // 9600 baud
 
-  rmi(); // enable interrupts
+  rim(); // enable interrupts
 
   for (;;) {
     putstring("Hello world!\n", 6 + 7);
