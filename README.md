@@ -33,3 +33,13 @@ $ stm8flash -c stlinkv2 -p stm8s103f3 -w led.ihx
 ## Interrupts
 `serial_interrupt.c` sets up an interrupt handler to perform serial transmission
 without busy wait.
+
+## PWM
+`sound.c` uses a timer and an interrupt to create 8-bit PWM output on a pin.
+You can directly attach a speaker and will hear a low-volume tone:
+
+![Oscilloscope View of PWM output](imgs/sound-raw-pwm-output.png)
+
+For better sound-quality add a 2.2μF capacitor to GND as a low-pass filter:
+
+![Oscilloscope View of PWM output with capacitor](imgs/sound-with-2.2μF-capacitor.png)
