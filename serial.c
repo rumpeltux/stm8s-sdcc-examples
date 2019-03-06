@@ -5,9 +5,13 @@
 #include <stdio.h>
 #include "stm8.h"
 
+// printf is part of the stdlib. It uses putchar, which we implement here to
+// transmit on the serial line.
 void putchar(char c) {
+  // Wait until the TX register is Empty.
   while (!(UART1_SR & UART_SR_TXE))
     ;
+  // Then, write the byte to the data register.
   UART1_DR = c;
 }
 
