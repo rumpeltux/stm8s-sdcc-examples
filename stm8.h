@@ -23,6 +23,7 @@
 
 /* Clock */
 #define CLK_CKDIVR	*(volatile unsigned char *)0x50C6
+#define CLK_PCKENR1 *(volatile uint8_t *)0x50c7
 
 /* GPIO */
 #define PA_ODR *(volatile unsigned char *)0x5000
