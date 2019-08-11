@@ -20,6 +20,7 @@
 #define PIN7    (1 << 7)
 
 /* Register addresses */
+#define CCR *(volatile unsigned char *)0x7F0A
 
 /* Clock */
 #define CLK_CKDIVR	*(volatile unsigned char *)0x50C6
@@ -49,6 +50,9 @@
 #define PD_DDR *(volatile unsigned char *)0x5011
 #define PD_CR1 *(volatile unsigned char *)0x5012
 #define PD_CR2 *(volatile unsigned char *)0x5013
+
+#define EXTI_CR1 *(volatile unsigned char *)0x50A0
+#define EXTI_CR2 *(volatile unsigned char *)0x50A1
 
 /* UART */
 #define UART1_SR *(volatile unsigned char *)0x5230
@@ -308,6 +312,11 @@
 #define ISR(name,vector) void name(void) __interrupt(vector - 2)
 
 #define AWU_vector                           0x03
+#define EXTI_PORTA_vector                    0x05
+#define EXTI_PORTB_vector                    0x06
+#define EXTI_PORTC_vector                    0x07
+#define EXTI_PORTD_vector                    0x08
+#define EXTI_PORTE_vector                    0x09
 #define SPI_TXE_vector                       0x0C
 #define SPI_RXNE_vector                      0x0C
 #define SPI_WKUP_vector                      0x0C

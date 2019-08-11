@@ -31,8 +31,9 @@ $ stm8flash -c stlinkv2 -p stm8s103f3 -w led.ihx
 `serial.c` demos using the UART to transmit serial data.
 
 ## Interrupts
-`serial_interrupt.c` sets up an interrupt handler to perform serial transmission
-without busy wait.
+* `serial_interrupt.c` sets up an interrupt handler to perform serial transmission
+  without busy wait.
+* `gpio_interrupt.c` wakes up from halt mode via external gpio interrupt on B4.
 
 ## PWM
 `sound.c` uses a timer and an interrupt to create 8-bit PWM output on a pin.
