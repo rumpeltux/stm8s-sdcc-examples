@@ -1,5 +1,9 @@
 # SDCC stuff
+*.asm
+*.cdb
+*.ihx
 *.lnk
+*.lk
 *.lst
 *.map
 *.mem
