@@ -10,7 +10,7 @@
 // These are (sometimes) optimized by sdcc to use the bset/bres assembly
 // instructions.
 #define CLRBIT(REG, VALUE) REG &= ~VALUE
-#define SETBIT(REG, VALUE) REG |= ~VALUE
+#define SETBIT(REG, VALUE) REG |=  VALUE
 
 // The interrupt is called every time the TXE (transmission byte empty)
 // flag in UART_SR is set. It doesn't have any context, so needs to
